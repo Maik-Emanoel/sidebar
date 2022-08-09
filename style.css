@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+	--light-grey: #dce4e3;
+  --text-color: #084236;
+
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--body-bg-color);
+  height: 100vh;
+}
+
+h1 {
+  display: inline-block;
+  position: absolute;
+
+  width: 14.8rem;
+  height: 3.8rem;
+  
+  font-weight: 500;
+
+  margin-top: 1.8rem;
+  margin-left: 2rem;
+
+  text-align: center;
+
+  color: var(--text-color);
+}
+
+.sidebar {
+  width: 7.8rem;
+  height: 100%;
+  background: var(--green);
+
+  display: inline-block;
+  position: relative;
+
+  transition: all 150ms;
+}
+
+.sidebar .menuBtn {
+  padding-top: 2.6rem;
+  margin-bottom: 2.9rem;
+
+  width: 24px;
+  margin-inline: auto;
+
+  cursor: pointer;
+}
+
+.sidebar .icons {
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+}
+
+.sidebar .logo,
+.sidebar .icons h3,
+.sidebar .userProfile {
+  display: none;
+}
+
+
+.sidebar .icons div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-items: center;
+
+  width: 5rem;
+  height: 5rem;
+
+  padding: 13px;
+  margin-left: 1.4rem;
+
+  border-radius: 1.2rem;
+  transition: background 300ms ease-in-out;
+}
+
+.sidebar .icons div:nth-of-type(1) {
+  background: var(--light-grey);
+}
+
+.sidebar .icons div:hover{
+  background: var(--light-grey);
+}
+
+.sidebar .log-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  width: 7.9rem;
+  height: 6rem;
+
+  position: absolute;
+  bottom: 0;
+
+  background: var(--light-green);
+}
+
+
+/* ============== SIDEBAR OPEN ============== */
+
+.sidebar.open .logo,
+.sidebar.open .icons h3,
+.sidebar.open .userProfile {
+  display: initial;
+}
+
+.sidebar.open .menuBtn,
+.sidebar.open .icons {
+  margin: initial;
+  padding: initial;
+  gap: initial;
+  height: initial;
+}
+
+.sidebar.open .icons svg:hover {
+  background: initial;
+  width: initial;
+  height: initial;
+  padding: initial;
+  position: relative;
+  left: initial;
+  border-radius: initial;
+}
+
+.sidebar.open {
+  width: 25rem;
+  height: 100%;
+
+  transition: all 300ms;
+}
+
+.sidebar.open .sidebarHeader {
+  display: flex;
+  margin: 2.4rem 1.4rem 2.6rem 2.9rem;
+
+  justify-content: space-between;
+}
+
+
+.sidebar.open .icons div{
+  display: flex;
+  flex-direction: row;
+
+  width: 22.2rem;
+  height: 5rem;
+  gap: 1.3rem;
+
+  align-items: center;
+
+  padding: 1.3rem 0 1.3rem 1.3rem;
+
+  margin-left: 1.4rem;
+  border-radius: 1.2rem;
+
+  transition: all 300ms linear;
+}
+
+.sidebar.open .icons div:hover {
+  background: var(--light-green);
+}
+
+.sidebar.open .icons div h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  text-transform: capitalize;
+
+  color: var(--text-color);
+}
+
+.sidebar.open .log-out {
+  display: flex;
+  width: 100%;
+  height: 6rem;
+}
+
+.sidebar.open .log-out .userProfile {
+  display: flex;
+  order: -1;
+}
+
+.sidebar.open .log-out .userProfile div {
+  width: 98px;
+  height: 36px;
+
+  margin-left: 9px;
+  margin-right: 47px;
+}
+
+.sidebar.open .log-out .userProfile h3{
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  color: var(--text-color);
+}
+
+.sidebar.open .log-out .userProfile p {
+  height: 18px;
+}
+
