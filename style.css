@@ -94,7 +94,7 @@ h1 {
 }
 
 .sidebar .icons div:hover{
-  background: var(--light-grey);
+  background: var(--light-green);
 }
 
 .sidebar .log-out {
@@ -130,7 +130,7 @@ h1 {
   height: initial;
 }
 
-.sidebar.open .icons svg:hover {
+.sidebar.open .icons img:hover {
   background: initial;
   width: initial;
   height: initial;
